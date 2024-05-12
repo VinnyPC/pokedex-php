@@ -8,17 +8,11 @@ $pokemons = $data['results'];
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/listar_pokemons.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <title>Listar Pokemons</title>
 </head>
 <body>
-    <header>
-        <a href="../../index.php">Home</a>
-        <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
-        <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
-        <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
-        <a href="../../php/itens.php">Itens</a>
-    </header>
     <h1>Listar Pokemons</h1>
     <ul>
         <?php foreach ($pokemons as $pokemon): ?>
@@ -37,5 +31,36 @@ $pokemons = $data['results'];
         return $pokemon_data['sprites']['front_default'];
     }
     ?>
+    <nav class="nav">
+  <input id="menu" type="checkbox">
+  <label for="menu">Menu</label>
+  <ul class="menu">
+    <li>
+      <a href="./comparar_pokemon.php">
+        <span>Comparar</span>
+        <i class="fa-regular fa-clipboard"></i>
+      </a>
+    </li>
+    <li>
+      <a href="./itens.php">
+        <span>Itens</span>
+        <i class="fa-solid fa-bullseye"></i>
+      </a>
+    </li>
+    <li>
+      <a href="./detalhes_pokemon.php">
+        <span>Pokémon</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </a>
+    </li>
+    <li>
+      <a href="./listar_pokemons.php">
+        <span>Pokémons</span>
+        <i class="fa-solid fa-list"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+<script src="https://kit.fontawesome.com/70ebb0b9ef.js" crossorigin="anonymous"></script>
 </body>
 </html>

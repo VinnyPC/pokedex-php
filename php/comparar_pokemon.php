@@ -27,20 +27,13 @@ if(isset($_GET['name1']) && isset($_GET['name2'])) {
 <head>
     <title>Comparar Pokémon</title>
     <link rel="stylesheet" type="text/css" href="../css/comparar_pokemon.css">
-    <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
 </head>
 <body>
-    <header>
-        <a href="../../index.php">Home</a>
-        <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
-        <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
-        <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
-        <a href="../../php/itens.php">Itens</a>
-    </header>
+    
     <h1>Comparar Pokémon</h1>
     
-    <!-- Formulário para inserir os nomes dos Pokémon -->
     <form action="comparar_pokemon.php" method="GET">
         <label for="pokemon_name1">Nome do 1º Pokémon:</label>
         <input type="text" id="pokemon_name1" name="name1">
@@ -103,31 +96,31 @@ if(isset($_GET['name1']) && isset($_GET['name2'])) {
   <label for="menu">Menu</label>
   <ul class="menu">
     <li>
-      <a href="#0">
-        <span>About</span>
-        <i class="fas fa-address-card" aria-hidden="true"></i>
+      <a href="./comparar_pokemon.php">
+        <span>Comparar</span>
+        <i class="fa-regular fa-clipboard"></i>
       </a>
     </li>
     <li>
-      <a href="#0">
-        <span>Projects</span>
-        <i class="fas fa-tasks" aria-hidden="true"></i>
+      <a href="./itens.php">
+        <span>Itens</span>
+        <i class="fa-solid fa-bullseye"></i>
       </a>
     </li>
     <li>
-      <a href="#0">
-        <span>Clients</span>
-        <i class="fas fa-users" aria-hidden="true"></i>
+      <a href="./detalhes_pokemon.php">
+        <span>Pokémon</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
       </a>
     </li>
     <li>
-      <a href="#0">
-        <span>Contact</span>
-        <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+      <a href="./listar_pokemons.php">
+        <span>Pokémons</span>
+        <i class="fa-solid fa-list"></i>
       </a>
     </li>
   </ul>
 </nav>
-    
+<script src="https://kit.fontawesome.com/70ebb0b9ef.js" crossorigin="anonymous"></script>
 </body>
 </html>
