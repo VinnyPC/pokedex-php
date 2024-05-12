@@ -3,34 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/itens.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
     <title>Itens Pokémon</title>
-    <style>
-        /* Adicione estilos CSS aqui */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
+    <nav>
+        <a href="../../index.php">Home</a>
+        <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
+        <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
+        <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
+        <a href="../../php/itens.php">Itens</a>
+    </nav>
     <h1>Itens Pokémon</h1>
     <ul>
         <?php

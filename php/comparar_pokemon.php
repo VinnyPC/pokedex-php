@@ -26,22 +26,17 @@ if(isset($_GET['name1']) && isset($_GET['name2'])) {
 <html>
 <head>
     <title>Comparar Pokémon</title>
-    <style>
-        .pokemon-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .pokemon-details {
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 45%;
-        }
-        .pokemon-details img {
-            max-width: 100px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/comparar_pokemon.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
+    <nav>
+        <a href="../../index.php">Home</a>
+        <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
+        <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
+        <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
+        <a href="../../php/itens.php">Itens</a>
+    </nav>
     <h1>Comparar Pokémon</h1>
     
     <!-- Formulário para inserir os nomes dos Pokémon -->

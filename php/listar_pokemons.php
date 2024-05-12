@@ -1,5 +1,5 @@
 <?php
-$json = file_get_contents('https://pokeapi.co/api/v2/pokemon');
+$json = file_get_contents('https://pokeapi.co/api/v2/pokemon?limit=100&offset=0');
 $data = json_decode($json, true);
 $pokemons = $data['results'];
 ?>
@@ -7,8 +7,16 @@ $pokemons = $data['results'];
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="../css/listar_pokemons.css">
     <title>Listar Pokemons</title>
 </head>
+    <nav>
+        <a href="../../index.php">Home</a>
+        <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
+        <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
+        <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
+        <a href="../../php/itens.php">Itens</a>
+    </nav>
 <body>
     <h1>Listar Pokemons</h1>
     <ul>
