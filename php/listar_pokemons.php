@@ -10,18 +10,24 @@ $pokemons = $data['results'];
     <link rel="stylesheet" type="text/css" href="../css/listar_pokemons.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <title>Listar Pokemons</title>
+    <title>Lista Pokémons</title>
 </head>
 <body>
-    <h1>Listar Pokemons</h1>
-    <ul>
-        <?php foreach ($pokemons as $pokemon): ?>
-            <li>
-                <strong>Name:</strong> <?php echo $pokemon['name']; ?><br>
-                <img src="<?php echo getSprite($pokemon['url']); ?>" alt="">
-            </li>
-        <?php endforeach; ?>
-    </ul>
+    <ul class="pokemon-list">
+    <?php foreach ($pokemons as $pokemon): ?>
+        <li class="pokemon-card">
+            <div class="card">
+                <img src="<?php echo getSprite($pokemon['url']); ?>" alt="<?php echo $pokemon['name']; ?>">
+                <div class="card__content">
+                    <p class="card__title"><?php echo $pokemon['name']; ?></p>
+                    <p class="card__description"><img src="<?php echo getSprite($pokemon['url']); ?>" alt="<?php echo $pokemon['name']; ?>"></p>
+                </div>
+            </div>
+        </li>
+    <?php endforeach; ?>
+</ul>
+
+
 
     <?php
 

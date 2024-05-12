@@ -27,6 +27,9 @@ if(isset($_GET['name'])) {
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <title>Detalhes do Pokémon</title>
     <link rel="stylesheet" type="text/css" href="../css/detalhes_pokemon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Detalhes do Pokémon</h1>
