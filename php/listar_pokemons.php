@@ -8,16 +8,17 @@ $pokemons = $data['results'];
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/listar_pokemons.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <title>Listar Pokemons</title>
 </head>
-    <nav>
+<body>
+    <header>
         <a href="../../index.php">Home</a>
         <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
         <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
         <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
         <a href="../../php/itens.php">Itens</a>
-    </nav>
-<body>
+    </header>
     <h1>Listar Pokemons</h1>
     <ul>
         <?php foreach ($pokemons as $pokemon): ?>

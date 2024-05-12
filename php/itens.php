@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/itens.css">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <title>Itens Pokémon</title>
 </head>
 <body>
-    <nav>
+    <header>
         <a href="../../index.php">Home</a>
         <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
         <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
         <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
         <a href="../../php/itens.php">Itens</a>
-    </nav>
+    </header>
     <h1>Itens Pokémon</h1>
     <ul>
         <?php

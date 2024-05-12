@@ -24,17 +24,18 @@ if(isset($_GET['name'])) {
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <title>Detalhes do Pokémon</title>
     <link rel="stylesheet" type="text/css" href="../css/detalhes_pokemon.css">
 </head>
 <body>
-    <nav>
+    <header>
         <a href="../../index.php">Home</a>
         <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
         <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
         <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
         <a href="../../php/itens.php">Itens</a>
-    </nav>
+    </header>
     <h1>Detalhes do Pokémon</h1>
     
     <!-- Formulário para inserir o nome do Pokémon -->

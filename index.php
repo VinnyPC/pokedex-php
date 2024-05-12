@@ -2,15 +2,19 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
     <title>Pokedex</title>
 </head>
 <body>
-    <h1>Bem-vindo à Pokedex</h1>
-    <ul>
-        <li><a href="./php/listar_pokemons.php">Listar Pokemons</a></li>
-        <li><a href="./php/comparar_pokemon.php">Comparar Pokemons</a></li>
-        <li><a href="./php/detalhes_pokemon.php">Detalhes de Pokemon</a></li>
-        <li><a href="./php/itens.php">Itens</a></li>  
-    </ul>
+    <div class="links-container">
+        <div class="links-container-items">
+            <a class="btn" href="./php/listar_pokemons.php">Listar Pokemons</a>
+            <a class="btn" href="./php/comparar_pokemon.php">Comparar Pokemons</a>
+        </div>
+        <div class="links-container-items">
+            <a class="btn" href="./php/detalhes_pokemon.php">Detalhes de Pokemon</a>
+            <a class="btn" href="./php/itens.php">Itens</a>
+        </div>
+    </div>
 </body>
 </html>

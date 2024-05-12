@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <link rel="stylesheet" type="text/css" href="../css/detalhes_item.css">
+    <link rel="stylesheet" type="text/css" href="../css/header.css">
     <title>Detalhes do Item Pokémon</title>
 </head>
 <body>
-    <nav>
+    <header>
         <a href="../../index.php">Home</a>
         <a href="../../php/listar_pokemons.php">Listar Pokemons</a>
         <a href="../../php/comparar_pokemon.php">Comparar Pokemons</a>
         <a href="../../php/detalhes_pokemon.php">Detalhes de Pokemon</a>
         <a href="../../php/itens.php">Itens</a>
-    </nav>
+    </header>
     <h1>Detalhes do Item Pokémon</h1>
     <?php
     if (isset($_GET['url'])) {
