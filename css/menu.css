@@ -163,6 +163,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+    box-shadow: 10px 10px 45px -12px rgba(0, 0, 0, 0.75);
 }
 .btn-off {
    background-color: red;

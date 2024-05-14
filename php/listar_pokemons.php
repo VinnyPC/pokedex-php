@@ -10,13 +10,8 @@ $pokemons = $data['results'];
     <link rel="stylesheet" type="text/css" href="../css/listar_pokemons.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Lista Pokémons</title>
 </head>
-<div class="topo">
-      <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
-      power_settings_new
-      </span></a>
 <body>
     <ul class="pokemon-list">
     <?php foreach ($pokemons as $pokemon): ?>

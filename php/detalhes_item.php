@@ -15,24 +15,26 @@
       power_settings_new
       </span></a>
     </div>
-    <?php
-    if (isset($_GET['url'])) {
-        $item_url = $_GET['url'];
-        $item_json = file_get_contents($item_url);
-        $item_data = json_decode($item_json, true);
+    <div class="item-container">
+      <?php
+      if (isset($_GET['url'])) {
+          $item_url = $_GET['url'];
+          $item_json = file_get_contents($item_url);
+          $item_data = json_decode($item_json, true);
 
-        // Verificar se a requisição foi bem-sucedida e exibir os detalhes do item
-        if (isset($item_data['name'])) {
-            echo "<p><strong>Nome:</strong> {$item_data['name']}</p>";
-            echo "<p><strong>Efeito:</strong> {$item_data['effect_entries'][0]['effect']}</p>";
-            // Exibir outras informações do item conforme necessário
-        } else {
-            echo "<p>Não foi possível carregar os detalhes do item.</p>";
-        }
-    } else {
-        echo "<p>Nenhum item selecionado.</p>";
-    }
-    ?>
+          
+          if (isset($item_data['name'])) {
+              echo "<h2>{$item_data['name']}</h2>";
+              echo "<img src='{$item_data['sprites']['default']}' alt='Front Sprite'>";
+              echo "<p><strong>Efeito:</strong> {$item_data['effect_entries'][0]['effect']}</p>";
+          } else {
+              echo "<p>Não foi possível carregar os detalhes do item.</p>";
+          }
+      } else {
+          echo "<p>Nenhum item selecionado.</p>";
+      }
+      ?>
+    </div>
 <nav class="nav">
   <input id="menu" type="checkbox">
   <label for="menu">Menu</label>
