@@ -15,10 +15,11 @@
       <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
       power_settings_new
       </span></a>
-    <ul>
+  </div>
+    <ul class="lista-itens">
         <?php
         // Fazer a requisição para a API dos itens
-        $url = 'https://pokeapi.co/api/v2/item/';
+        $url = 'https://pokeapi.co/api/v2/item/?offset=20&limit=75';
         $itens_json = file_get_contents($url);
         $itens_data = json_decode($itens_json, true);
 

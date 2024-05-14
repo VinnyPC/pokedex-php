@@ -2,10 +2,7 @@
      font-family: Arial, sans-serif;
      margin: 0;
      padding: 20px;
- }
-
- h1 {
-     text-align: center;
+    background-image: url(https://i.pinimg.com/736x/7a/b9/f0/7ab9f0625d1e0b228c6240e73f9e60c0.jpg);
  }
 
  ul {
@@ -19,9 +16,43 @@
 
  a {
      text-decoration: none;
-     color: #007bff;
+ }
+ .lista-itens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+ }
+ .lista-itens li {
+     --width: 150px;
+     --timing: 2s;
+     border: 0;
+     width: var(--width);
+     padding-block: 1em;
+     color: black;
+     font-weight: bold;
+     font-size: 1em;
+     background: white;
+     transition: all 0.2s;
+     border-radius: 3px;
+     cursor: pointer;
  }
 
- a:hover {
-     text-decoration: underline;
+ .lista-itens li:hover {
+     background-image: linear-gradient(to right,
+             red,
+             red 16.65%,
+             white 16.65%,
+             white 33.3%,
+             red 33.3%,
+             red 49.95%,
+             white 49.95%,
+             white 66.6%,
+             red 66.6%,
+             red 83.25%,
+             white 83.25%,
+             white 100%,
+             red 100%);
+     animation: var(--timing) linear dance6123 infinite;
+     transform: scale(1.1) translateY(-1px);
  }
