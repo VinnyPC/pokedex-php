@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/detalhes_item.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Detalhes do Item Pokémon</title>
 </head>
 <body>
-    <h1>Detalhes do Item Pokémon</h1>
+    <div class="topo">
+      <h1>Detalhes do Item Pokémon</h1>
+      <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
+      power_settings_new
+      </span></a>
+    </div>
     <?php
     if (isset($_GET['url'])) {
         $item_url = $_GET['url'];

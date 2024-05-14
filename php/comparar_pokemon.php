@@ -29,11 +29,15 @@ if(isset($_GET['name1']) && isset($_GET['name2'])) {
     <link rel="stylesheet" type="text/css" href="../css/comparar_pokemon.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    
-    <h1>Comparar Pokémon</h1>
-    
+    <div class="topo">
+      <h1>Comparar Pokémon</h1>
+      <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
+      power_settings_new
+      </span></a>
+    </div>
     <form action="comparar_pokemon.php" method="GET">
         <label for="pokemon_name1">Nome do 1º Pokémon:</label>
         <input type="text" id="pokemon_name1" name="name1">

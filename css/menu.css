@@ -158,3 +158,15 @@ a {
     opacity: 1;
     transition-delay: 0.9s;
 }
+
+.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-off {
+   background-color: red;
+   scale: 2;
+   margin: 25px;
+   border-radius: 25px;
+}

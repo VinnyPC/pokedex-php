@@ -6,10 +6,15 @@
     <link rel="stylesheet" type="text/css" href="../css/itens.css">
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <title>Itens Pokémon</title>
 </head>
 <body>
+  <div class="topo">
     <h1>Itens Pokémon</h1>
+      <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
+      power_settings_new
+      </span></a>
     <ul>
         <?php
         // Fazer a requisição para a API dos itens
