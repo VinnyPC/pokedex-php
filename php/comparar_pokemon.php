@@ -33,66 +33,82 @@ if(isset($_GET['name1']) && isset($_GET['name2'])) {
 </head>
 <body>
     <div class="topo">
-      <h1>Comparar Pokémon</h1>
+      <h1 class="pag-titulo">Comparar Pokémon</h1>
       <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
       power_settings_new
       </span></a>
     </div>
     <form action="comparar_pokemon.php" method="GET">
-        <label for="pokemon_name1">Nome do 1º Pokémon:</label>
         <input type="text" id="pokemon_name1" name="name1">
-        <label for="pokemon_name2">Nome do 2º Pokémon:</label>
+        <label for="versus">X</label>
         <input type="text" id="pokemon_name2" name="name2">
         <button type="submit">Comparar</button>
     </form>
 
-    <!-- Verifica se os dados dos Pokémon foram obtidos -->
     <?php if($pokemon1_data && $pokemon2_data): ?>
         <div class="pokemon-container">
-            <div class="pokemon-details">
-                <h2><?php echo $pokemon1_data['name']; ?></h2>
-                <p><strong>ID:</strong> <?php echo $pokemon1_data['id']; ?></p>
-                <p><strong>Base Experience:</strong> <?php echo $pokemon1_data['base_experience']; ?></p>
-                <p><strong>Height:</strong> <?php echo $pokemon1_data['height']; ?></p>
-                <p><strong>Weight:</strong> <?php echo $pokemon1_data['weight']; ?></p>
-                <p><strong>Abilities:</strong></p>
+          <div class="pokemon-details">
+            <div class="pokemon-details-stats">
+                <h2 class="pokemon-name"><?php echo $pokemon1_data['name']; ?></h2>
+                <p>ID: <?php echo $pokemon1_data['id']; ?></p>
+                <p>Base Experience: <?php echo $pokemon1_data['base_experience']; ?></p>
+                <p>Height: <?php echo $pokemon1_data['height']; ?></p>
+                <p>Weight: <?php echo $pokemon1_data['weight']; ?></p>
+            </div>
+            <div class="pokemon-details-sprites">
+                <img src="<?php echo $pokemon1_data['sprites']['front_default']; ?>" alt="Front Sprite">
+                <img src="<?php echo $pokemon1_data['sprites']['back_default']; ?>" alt="Back Sprite">
+            </div>
+            <div class="pokemon-details-ab">
+                <p>Abilities:</p>
                 <ul>
                     <?php foreach ($pokemon1_data['abilities'] as $ability): ?>
                         <li><?php echo $ability['ability']['name']; ?></li>
                     <?php endforeach; ?>
                 </ul>
-                <p><strong>Type(s):</strong></p>
+            </div>
+            <div class="pokemon-details-type">
+                <p>Type(s):</p>
                 <ul>
                     <?php foreach ($pokemon1_data['types'] as $type): ?>
                         <li><?php echo $type['type']['name']; ?></li>
                     <?php endforeach; ?>
                 </ul>
-                <p><strong>Sprites:</strong></p>
-                <img src="<?php echo $pokemon1_data['sprites']['front_default']; ?>" alt="Front Sprite">
-                <img src="<?php echo $pokemon1_data['sprites']['back_default']; ?>" alt="Back Sprite">
+            </div>    
             </div>
+              
+            
             <div class="pokemon-details">
-                <h2><?php echo $pokemon2_data['name']; ?></h2>
-                <p><strong>ID:</strong> <?php echo $pokemon2_data['id']; ?></p>
-                <p><strong>Base Experience:</strong> <?php echo $pokemon2_data['base_experience']; ?></p>
-                <p><strong>Height:</strong> <?php echo $pokemon2_data['height']; ?></p>
-                <p><strong>Weight:</strong> <?php echo $pokemon2_data['weight']; ?></p>
-                <p><strong>Abilities:</strong></p>
+              <div class="pokemon-details-stats">
+                <h2 class="pokemon-name"><?php echo $pokemon2_data['name']; ?></h2>
+                <p>ID: <?php echo $pokemon2_data['id']; ?></p>
+                <p>Base Experience: <?php echo $pokemon2_data['base_experience']; ?></p>
+                <p>Height: <?php echo $pokemon2_data['height']; ?></p>
+                <p>Weight: <?php echo $pokemon2_data['weight']; ?></p>
+              </div>
+              <div class="pokemon-details-sprites">
+                <img src="<?php echo $pokemon2_data['sprites']['front_default']; ?>" alt="Front Sprite">
+                <img src="<?php echo $pokemon2_data['sprites']['back_default']; ?>" alt="Back Sprite">
+              </div>
+              <div class="pokemon-details-ab">
+                <p>Abilities:</p>
                 <ul>
                     <?php foreach ($pokemon2_data['abilities'] as $ability): ?>
                         <li><?php echo $ability['ability']['name']; ?></li>
                     <?php endforeach; ?>
                 </ul>
-                <p><strong>Type(s):</strong></p>
+              </div>
+              <div class="pokemon-details-type">
+                <p>Type(s):</p>
                 <ul>
                     <?php foreach ($pokemon2_data['types'] as $type): ?>
                         <li><?php echo $type['type']['name']; ?></li>
                     <?php endforeach; ?>
                 </ul>
-                <p><strong>Sprites:</strong></p>
-                <img src="<?php echo $pokemon2_data['sprites']['front_default']; ?>" alt="Front Sprite">
-                <img src="<?php echo $pokemon2_data['sprites']['back_default']; ?>" alt="Back Sprite">
-            </div>
+              </div>
+              </div>
+              
+          </div>
         </div>
     <?php endif; ?>
 <nav class="nav">

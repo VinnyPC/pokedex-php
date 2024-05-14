@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="topo">
-    <h1>Itens Pokémon</h1>
+    <h1 class="pag-titulo">Itens Pokémon</h1>
       <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
       power_settings_new
       </span></a>

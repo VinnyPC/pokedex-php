@@ -26,9 +26,6 @@ $pokemons = $data['results'];
         </li>
     <?php endforeach; ?>
 </ul>
-
-
-
     <?php
 
     function getSprite($url) {

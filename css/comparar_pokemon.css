@@ -1,6 +1,14 @@
+
+
 .pokemon-container {
     display: flex;
     justify-content: space-between;
+    margin: auto 35px;
+}
+
+body form {
+    margin: 50px auto;
+    text-align: center;
 }
 
 .pokemon-details {
@@ -9,8 +17,32 @@
     width: 45%;
 }
 
-.pokemon-details img {
-    max-width: 100px;
+.pokemon-name{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.pokemon-details-sprites img {
+    scale: 1.2;
+}
+
+.pokemon-details-sprites{
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pokemon-details-ab{
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 10px;
+    align-items: center;
+}
+.pokemon-details-type{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 

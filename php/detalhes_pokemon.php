@@ -34,7 +34,7 @@ if(isset($_GET['name'])) {
 </head>
 <body>
   <div class="topo">
-     <h1>Detalhes do Pokémon</h1>
+     <h1 class="pag-titulo">Detalhes do Pokémon</h1>
       <a class="btn-off" href="../index.php"><span class="material-symbols-outlined">
       power_settings_new
       </span></a>
