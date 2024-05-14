@@ -3,7 +3,7 @@
 .pokemon-container {
     display: flex;
     justify-content: space-between;
-    margin: auto 35px;
+    margin: auto 15%;
 }
 
 body form {
@@ -13,8 +13,9 @@ body form {
 
 .pokemon-details {
     border: 1px solid #ccc;
+    border-radius: 15px;
     padding: 10px;
-    width: 45%;
+    width: 30% !important;
 }
 
 .pokemon-name{
@@ -30,6 +31,7 @@ body form {
     border: 1px solid #ccc;
     display: flex;
     justify-content: space-around;
+    margin-top: 15px;
 }
 
 .pokemon-details-ab{
