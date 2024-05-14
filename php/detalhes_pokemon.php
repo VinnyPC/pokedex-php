@@ -40,44 +40,42 @@ if(isset($_GET['name'])) {
       </span></a>
     </div>
    
-    
-    <!-- Formulário para inserir o nome do Pokémon -->
     <form action="detalhes_pokemon.php" method="GET">
         <label for="pokemon_name">Nome do Pokémon:</label>
         <input type="text" id="pokemon_name" name="name">
         <button type="submit">Buscar</button>
     </form>
 
-    <!-- Verifica se os dados do Pokémon foram obtidos -->
-    <?php if($pokemon_data): ?>
-      
-      <div class="pokemon-card">
-        <h2>Detalhes de <?php echo $pokemon_data['name']; ?></h2>
-        <div class="sprites">
-          <img src="<?php echo $pokemon_data['sprites']['front_default']; ?>" alt="Front Sprite">
-          <img src="<?php echo $pokemon_data['sprites']['back_default']; ?>" alt="Back Sprite">
-        </div>
-        <div class="details">
-          <p><strong>ID:</strong> <?php echo $pokemon_data['id']; ?></p>
-          <p><strong>Base Experience:</strong> <?php echo $pokemon_data['base_experience']; ?></p>
-          <p><strong>Height:</strong> <?php echo $pokemon_data['height']; ?></p>
-          <p><strong>Weight:</strong> <?php echo $pokemon_data['weight']; ?></p>
-          <p><strong>Abilities:</strong></p>
-        </div>
-          
-          <ul>
-              <?php foreach ($pokemon_data['abilities'] as $ability): ?>
-                  <li><?php echo $ability['ability']['name']; ?></li>
-              <?php endforeach; ?>
-          </ul>
-          <p><strong>Type(s):</strong></p>
-          <ul>
-              <?php foreach ($pokemon_data['types'] as $type): ?>
-                  <li><?php echo $type['type']['name']; ?></li>
-              <?php endforeach; ?>
-          </ul>
-        </div>
-      <?php endif; ?>
+    <div class="pokemon-container">
+      <?php if($pokemon_data): ?>
+        <div class="pokemon-card">
+          <h2>Detalhes de <?php echo $pokemon_data['name']; ?></h2>
+          <div class="sprites">
+            <img src="<?php echo $pokemon_data['sprites']['front_default']; ?>" alt="Front Sprite">
+            <img src="<?php echo $pokemon_data['sprites']['back_default']; ?>" alt="Back Sprite">
+          </div>
+          <div class="details">
+            <p><strong>ID:</strong> <?php echo $pokemon_data['id']; ?></p>
+            <p><strong>Base Experience:</strong> <?php echo $pokemon_data['base_experience']; ?></p>
+            <p><strong>Height:</strong> <?php echo $pokemon_data['height']; ?></p>
+            <p><strong>Weight:</strong> <?php echo $pokemon_data['weight']; ?></p>
+            <p><strong>Abilities:</strong></p>
+          </div>
+            
+            <ul>
+                <?php foreach ($pokemon_data['abilities'] as $ability): ?>
+                    <li><?php echo $ability['ability']['name']; ?></li>
+                <?php endforeach; ?>
+            </ul>
+            <p><strong>Type(s):</strong></p>
+            <ul>
+                <?php foreach ($pokemon_data['types'] as $type): ?>
+                    <li><?php echo $type['type']['name']; ?></li>
+                <?php endforeach; ?>
+            </ul>
+          </div>
+        <?php endif; ?>
+    </div>
     
     <nav class="nav">
   <input id="menu" type="checkbox">
